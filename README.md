@@ -4,15 +4,17 @@ Ce repo contient un ensemble de notebook "à trous" ordonnées.
 
 ## Contenu de la formation
 
+[Lien vers l'ensemble des slides de la formation](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing)
+
 ### 1. Introduction : à quoi sert la Data Science ?
 
-[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.p7)
 
 ### 2. Exemples de projets Data Science chez LV
 
 Exemples de projet & présentation du projet fil rouge
 
-[Slides](https://docs.google.com/presentation/d/1KFmtEYvBLSDcRCYj7DhdGWDGfR6LVHXI3UbYvb0U4tw/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_15)
 
 ### 3. Mise en place de l'environnement technique
 
@@ -20,7 +22,7 @@ Exemples de projet & présentation du projet fil rouge
 - Définition du problème
 - Présentation d'un planning pour la formation
 
-[Slides](https://docs.google.com/presentation/d/14Tx7gz2m0SZLL4BDFfXd3RA5hB_b2OUFDv3GmYUwmL8/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_81)
 
 ### 4. Analyse de données simple et visuelle. Production d'insights.
 
@@ -32,7 +34,7 @@ Exemples de projet & présentation du projet fil rouge
 - Familiarisation avec les concepts et le vocabulaire (entrées, sorties, fonctions de coût, métriques, paramètres)
 - Distinction entre supervisé et non supervisé
 
-[Slides](https://docs.google.com/presentation/d/1kJoEiIVJNLtt0OdcZDiqkSCJ0vm063LYLWxLERhfcrA/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_155)
 
 ### 6. Premier modèle linéaire à deux variables
 
