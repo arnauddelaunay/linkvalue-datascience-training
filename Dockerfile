@@ -4,10 +4,15 @@ EXPOSE 8888
 
 RUN useradd -ms /bin/bash jupyter
 USER jupyter
-WORKDIR /home/jupyter
+ENV HOME /home/jupyter
+WORKDIR ${HOME}
 
 COPY . /home/jupyter
 
-RUN pip install --user -r requirements.txt --no-cache-dir
+RUN pip install --user -r requirements.txt --no-cache-dir --no-warn-script-location
+ENV PATH="${HOME}/.local/bin:${PATH}"
 
-CMD ["/home/jupyter/.local/bin/jupyter-notebook", "--ip", "0.0.0.0"]
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextensions_configurator enable --user
+
+CMD jupyter notebook --notebook-dir=${HOME} --allow-root --ip="0.0.0.0"
