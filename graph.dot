@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="price_first_item_purchased <= 35.0\ngini = 0.499\nsamples = 19630\nvalue = [10351, 9279]\nclass = Low Revenue"] ;
+1 [label="united states <= 0.5\ngini = 0.409\nsamples = 9266\nvalue = [6612, 2654]\nclass = Low Revenue"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+5 [label="gini = 0.276\nsamples = 5667\nvalue = [4729, 938]\nclass = Low Revenue"] ;
+1 -> 5 ;
+6 [label="since_birth_parsed_days <= 102.0\ngini = 0.499\nsamples = 3599\nvalue = [1883, 1716]\nclass = Low Revenue"] ;
+1 -> 6 ;
+9 [label="gini = 0.496\nsamples = 3141\nvalue = [1425, 1716]\nclass = High Revenue"] ;
+6 -> 9 ;
+10 [label="gini = 0.0\nsamples = 458\nvalue = [458, 0]\nclass = Low Revenue"] ;
+6 -> 10 ;
+2 [label="united states <= 0.5\ngini = 0.461\nsamples = 10364\nvalue = [3739, 6625]\nclass = High Revenue"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="price_first_item_purchased <= 67.5\ngini = 0.499\nsamples = 6264\nvalue = [3249, 3015]\nclass = Low Revenue"] ;
+2 -> 3 ;
+7 [label="china <= 0.5\ngini = 0.477\nsamples = 4732\nvalue = [2877, 1855]\nclass = Low Revenue"] ;
+3 -> 7 ;
+11 [label="gini = 0.495\nsamples = 3942\nvalue = [2170, 1772]\nclass = Low Revenue"] ;
+7 -> 11 ;
+12 [label="gini = 0.188\nsamples = 790\nvalue = [707, 83]\nclass = Low Revenue"] ;
+7 -> 12 ;
+8 [label="china <= 0.5\ngini = 0.368\nsamples = 1532\nvalue = [372, 1160]\nclass = High Revenue"] ;
+3 -> 8 ;
+13 [label="gini = 0.272\nsamples = 1303\nvalue = [212, 1091]\nclass = High Revenue"] ;
+8 -> 13 ;
+14 [label="gini = 0.421\nsamples = 229\nvalue = [160, 69]\nclass = Low Revenue"] ;
+8 -> 14 ;
+4 [label="gini = 0.21\nsamples = 4100\nvalue = [490, 3610]\nclass = High Revenue"] ;
+2 -> 4 ;
+}
