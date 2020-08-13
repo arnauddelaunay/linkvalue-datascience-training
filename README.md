@@ -1,4 +1,4 @@
-## DSPLN : Data Science Pour Les Nuls ##
+## Machine Learning 101 ##
 
 Ce repo contient un ensemble de notebook "à trous" ordonnées.
 
@@ -6,70 +6,107 @@ Ce repo contient un ensemble de notebook "à trous" ordonnées.
 
 [Lien vers l'ensemble des slides de la formation](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing)
 
-### 1. Introduction : à quoi sert la Data Science ?
+## Extensions à ajouter
+Les notebooks tournent avec des extensions jupyter notebook.
+Quand nous aurons accès à jupyter (petit 3. de la formation), nous devrons activer certaines extensions.
 
-[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.p7)
+Pour cela, il faudra aller dans l'onglet __Nbextensions tab__ et cocher les cases suivantes :
++ `Exercice2`
++ `ExecuteTime`
++ `highlighter`
++ `Table of Contents (2)`
 
-### 2. Exemples de projets Data Science chez LV
+## Installation via Docker
 
-Exemples de projet & présentation du projet fil rouge
+__Construire l'image__
 
-[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_15)
+```
+docker build -t lv-training-ml101 .
+```
 
-### 3. Mise en place de l'environnement technique
+__Lancer__
 
-- Clonage des notebook du cours
-- Définition du problème
-- Présentation d'un planning pour la formation
+```
+docker run -d -p 8888:8888 -v $(pwd):/home/jupyter/notebooks lv-training-ml101
+```
 
-[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_81)
+__Checker le container id__
 
-### 4. Analyse de données simple et visuelle. Production d'insights.
+```
+docker ps
+```
 
-[Notebook n°1](notebook_1.ipynb)
+__Pour bosser__
 
-### 5. Présentation d'un premier modèle abstrait
+Aller sur http://127.0.0.1:8888
 
-- Présentation du modèle
-- Familiarisation avec les concepts et le vocabulaire (entrées, sorties, fonctions de coût, métriques, paramètres)
-- Distinction entre supervisé et non supervisé
+Pour retrouver le token du notebook, exécuter la commande :
+```
+docker logs <container_id>
+```
 
-[Slides](https://docs.google.com/presentation/d/1UkE6inFQK_Y0cv-yHPYJ0JjxtAihAPQDoY0HYbeL3Js/edit?usp=sharing#slide=id.g39e26df1f9_0_155)
+__A la fin__
 
-### 6. Premier modèle linéaire à deux variables
+```
+docker stop <container_id>
+```
 
-- Concepts de jeux de train, test, et validation
-- Explication des solutions analytiques vs. stochastiques.
+## Installation via virtualenv
 
-[Notebook n°2](notebook_2.ipynb)
+Vérifier que Python 3.5 ou 3.6 sont bien installés :
 
-### 7. Régression : modèle linéaire puis non linéaire
+```
+python3 --version
+```
 
-- Régression
-- Modèle linéaire
-- Modèle non-linéaire
-- Concept d'overfitting
+Sinon, ils sont disponibles ici en téléchargement [here](https://www.python.org/downloads/release/python-368/).
 
-[Notebook n°3](notebook_3.ipynb)
+Si tu n'as pas [virtualenv](https://pypi.org/project/virtualenv/) d'installé, tape :
 
-### 8. Features engineering
+```
+pip3 install virtualenv
+```
 
-Valeurs manquantes, valeurs catégorielles, création de features, présentation de l'API Sklearn. Création d'un nouveau dataset enrichi qui sera réutilisé ensuite.
+Puis exécute :
+```
+virtualenv --python=python3.6 lv-training-ml101
+source ./lv-training-ml101/bin/activate
+```
 
-[Notebook n°4](notebook_4.ipynb)
+Installer les requirements and lancer les notebooks:
 
-### 9. Arbre de décision avec plus de variables que le modèle n°6
+```
+pip3 install --upgrade -r requirements.txt
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+jupyter notebook
+```
 
-- Overfitting et solutions
-- RandomForests
-- Comparaison des résultats avec le modèle n° 6
+Pour quitter le virtualenv:
 
-[Notebook n°5](notebook_5.ipynb)
+```
+deactivate
+```
 
-### 10. Régression logistique avec plus de variables que le modèle n°6. sur le nombre d'étoiles et comparaison avec le modèle n° 6
+Pour supprimer le virtualenv:
 
-[Notebook n°6](notebook_6.ipynb)
+```
+rm -rf lv-training-ml101
+```
 
-### 11. KNN pour la régression & histoire du KMeans. Avantages et Inconvénients. 
 
-[Notebook n°7](notebook_7.ipynb)
+
+
+## Sommaire de la formation
+
+1. Introduction : à quoi sert la Data Science ?
+2. Exemples de projets Data Science chez LV
+3. Mise en place de l'environnement technique
+4. Analyse de données simple et visuelle. Production d'insights.
+5. Présentation d'un premier modèle abstrait
+6. Premier modèle linéaire à deux variables
+7. Régression : modèle linéaire puis non linéaire
+8. Features engineering
+9. Arbre de décision avec plus de variables que le modèle n°6
+10. Régression logistique avec plus de variables que le modèle n°6. sur le nombre d'étoiles et comparaison avec le modèle n° 6
+11. KNN pour la régression & histoire du KMeans. Avantages et Inconvénients. 
