@@ -30,20 +30,9 @@ __Lancer__
 docker run -d -p 8888:8888 -v $(pwd):/home/jupyter/notebooks lv-training-ml101
 ```
 
-__Checker le container id__
-
-```
-docker ps
-```
-
 __Pour bosser__
 
 Aller sur http://127.0.0.1:8888
-
-Pour retrouver le token du notebook, exécuter la commande :
-```
-docker logs <container_id>
-```
 
 __A la fin__
 
