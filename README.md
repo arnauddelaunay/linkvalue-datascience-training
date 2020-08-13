@@ -27,7 +27,7 @@ docker build -t lv-training-ml101 .
 __Lancer__
 
 ```
-docker run -d -p 8888:8888 lv-training-ml101
+docker run -d -p 8888:8888 -v $(pwd):/home/jupyter/notebooks lv-training-ml101
 ```
 
 __Checker le container id__
