@@ -15,4 +15,4 @@ ENV PATH="${HOME}/.local/bin:${PATH}"
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
 
-CMD jupyter notebook --notebook-dir=${HOME} --allow-root --ip="0.0.0.0"
+CMD jupyter notebook --notebook-dir=${HOME} --allow-root --ip="0.0.0.0" --NotebookApp.token='' --NotebookApp.password=''
