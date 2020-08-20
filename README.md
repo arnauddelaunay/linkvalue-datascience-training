@@ -1,4 +1,6 @@
 ## Machine Learning 101 ##
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arnauddelaunay/linkvalue-datascience-training/binder)
+
 
 Ce repo contient un ensemble de notebook "à trous" ordonnées.
 
