@@ -7,9 +7,9 @@ USER jupyter
 ENV HOME /home/jupyter
 WORKDIR ${HOME}
 
-COPY local.requirements.txt /home/jupyter/
+COPY requirements.txt /home/jupyter/
 
-RUN pip install --user -r local.requirements.txt --no-cache-dir --no-warn-script-location
+RUN pip install --user -r requirements.txt --no-cache-dir --no-warn-script-location
 ENV PATH="${HOME}/.local/bin:${PATH}"
 
 RUN jupyter contrib nbextension install --user
