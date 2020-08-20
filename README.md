@@ -21,7 +21,7 @@ Pour cela, il faudra aller dans l'onglet __Nbextensions tab__ et cocher les case
 __Construire l'image__
 
 ```
-docker build -t lv-training-ml101 .
+docker build -t lv-training-ml101 -f local.Dockerfile .
 ```
 
 __Lancer__
